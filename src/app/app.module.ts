@@ -23,6 +23,7 @@ import {LoginService} from './services/login.service';
 import {AddBookService} from './services/add-book.service';
 import {UploadImageService} from './services/upload-image.service';
 import { AddNewBookComponent } from './components/add-new-book/add-new-book.component';
+import { BookListComponent } from './components/book-list/book-list.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { AddNewBookComponent } from './components/add-new-book/add-new-book.comp
     NavBarComponent,
     LoginComponent,
     AddNewBookComponent,
+    BookListComponent,
 
   ],
   imports: [
@@ -47,7 +49,8 @@ import { AddNewBookComponent } from './components/add-new-book/add-new-book.comp
     RouterModule.forRoot([
       { path: '', redirectTo: '/login', pathMatch: 'full'},
       { path: 'login', component: LoginComponent},
-      { path: 'addNewBook', component: AddNewBookComponent}
+      { path: 'addNewBook', component: AddNewBookComponent},
+      { path: 'bookList', component: BookListComponent}
       ])
 
   ],
