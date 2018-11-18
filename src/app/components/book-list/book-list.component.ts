@@ -13,7 +13,7 @@ import {GetBookListService} from '../../services/get-book-list.service';
 export class BookListComponent implements OnInit {
   private selectedBook: Book;
   private checked: boolean;
-  private booklist: Book[];
+  public booklist: Book[];
   private allChecked: boolean;
   private removeBookList: Book[] = new Array();
 
@@ -22,9 +22,8 @@ export class BookListComponent implements OnInit {
   ngOnInit() {
     this.getBookListService.getBookList().subscribe(
       res => {
-        // console.log(res.json());
-        // this.booklist = res.json();
-        // this.booklist = res.json();
+        console.log(JSON.parse(JSON.stringify(res)));
+        this.booklist = JSON.parse(JSON.stringify(res));
 
       }, error => {
         console.log(error);
