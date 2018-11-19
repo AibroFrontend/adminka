@@ -24,6 +24,8 @@ import {AddBookService} from './services/add-book.service';
 import {UploadImageService} from './services/upload-image.service';
 import { AddNewBookComponent } from './components/add-new-book/add-new-book.component';
 import { BookListComponent } from './components/book-list/book-list.component';
+import { ViewBookComponent } from './components/view-book/view-book.component';
+import { GetBookService} from './services/get-book.service';
 
 @NgModule({
   declarations: [
@@ -32,6 +34,7 @@ import { BookListComponent } from './components/book-list/book-list.component';
     LoginComponent,
     AddNewBookComponent,
     BookListComponent,
+    ViewBookComponent,
 
   ],
   imports: [
@@ -50,14 +53,16 @@ import { BookListComponent } from './components/book-list/book-list.component';
       { path: '', redirectTo: '/login', pathMatch: 'full'},
       { path: 'login', component: LoginComponent},
       { path: 'addNewBook', component: AddNewBookComponent},
-      { path: 'bookList', component: BookListComponent}
+      { path: 'bookList', component: BookListComponent},
+      { path: 'viewBook/:id', component: ViewBookComponent}
       ])
 
   ],
   providers: [
     LoginService,
     AddBookService,
-    UploadImageService
+    UploadImageService,
+    GetBookService
   ],
   bootstrap: [AppComponent]
 })
