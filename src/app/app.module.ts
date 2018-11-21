@@ -26,6 +26,7 @@ import { AddNewBookComponent } from './components/add-new-book/add-new-book.comp
 import { BookListComponent } from './components/book-list/book-list.component';
 import { ViewBookComponent } from './components/view-book/view-book.component';
 import { GetBookService} from './services/get-book.service';
+import {MatListModule} from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { GetBookService} from './services/get-book.service';
     MatSelectModule,
     HttpClientModule,
     MatSlideToggleModule,
+    MatListModule,
     RouterModule.forRoot([
       { path: '', redirectTo: '/login', pathMatch: 'full'},
       { path: 'login', component: LoginComponent},
