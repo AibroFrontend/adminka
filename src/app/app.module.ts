@@ -27,6 +27,8 @@ import { BookListComponent } from './components/book-list/book-list.component';
 import { ViewBookComponent } from './components/view-book/view-book.component';
 import { GetBookService} from './services/get-book.service';
 import {MatListModule} from '@angular/material/list';
+import { EditBookComponent } from './components/edit-book/edit-book.component';
+import {EditBookService} from './services/edit-book.service';
 
 @NgModule({
   declarations: [
@@ -36,6 +38,7 @@ import {MatListModule} from '@angular/material/list';
     AddNewBookComponent,
     BookListComponent,
     ViewBookComponent,
+    EditBookComponent,
 
   ],
   imports: [
@@ -56,7 +59,8 @@ import {MatListModule} from '@angular/material/list';
       { path: 'login', component: LoginComponent},
       { path: 'addNewBook', component: AddNewBookComponent},
       { path: 'bookList', component: BookListComponent},
-      { path: 'viewBook/:id', component: ViewBookComponent}
+      { path: 'viewBook/:id', component: ViewBookComponent},
+      { path: 'editBook/:id', component: EditBookComponent}
       ])
 
   ],
@@ -64,7 +68,8 @@ import {MatListModule} from '@angular/material/list';
     LoginService,
     AddBookService,
     UploadImageService,
-    GetBookService
+    GetBookService,
+    EditBookService
   ],
   bootstrap: [AppComponent]
 })
