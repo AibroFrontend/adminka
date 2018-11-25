@@ -23,12 +23,16 @@ import {LoginService} from './services/login.service';
 import {AddBookService} from './services/add-book.service';
 import {UploadImageService} from './services/upload-image.service';
 import { AddNewBookComponent } from './components/add-new-book/add-new-book.component';
-import { BookListComponent } from './components/book-list/book-list.component';
+import { BookListComponent, DialogOverviewExampleDialog } from './components/book-list/book-list.component';
 import { ViewBookComponent } from './components/view-book/view-book.component';
 import { GetBookService} from './services/get-book.service';
 import {MatListModule} from '@angular/material/list';
 import { EditBookComponent } from './components/edit-book/edit-book.component';
 import {EditBookService} from './services/edit-book.service';
+import {RemoveBookService} from './services/remove-book.service';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
+import {MatDialogModule} from '@angular/material/dialog';
+
 
 @NgModule({
   declarations: [
@@ -37,6 +41,7 @@ import {EditBookService} from './services/edit-book.service';
     LoginComponent,
     AddNewBookComponent,
     BookListComponent,
+    DialogOverviewExampleDialog,
     ViewBookComponent,
     EditBookComponent,
 
@@ -54,6 +59,7 @@ import {EditBookService} from './services/edit-book.service';
     HttpClientModule,
     MatSlideToggleModule,
     MatListModule,
+    MatDialogModule,
     RouterModule.forRoot([
       { path: '', redirectTo: '/login', pathMatch: 'full'},
       { path: 'login', component: LoginComponent},
@@ -69,8 +75,10 @@ import {EditBookService} from './services/edit-book.service';
     AddBookService,
     UploadImageService,
     GetBookService,
-    EditBookService
+    EditBookService,
+    RemoveBookService
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent, DialogOverviewExampleDialog ]
+  // entryComponents: [DialogOverviewExampleDialog]
 })
 export class AppModule { }
