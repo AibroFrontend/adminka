@@ -21,7 +21,7 @@ export class BookListComponent implements OnInit {
   private selectedBook: Book;
   private checked: boolean;
   public booklist: Book[];
-  private allChecked: boolean;
+  public allChecked: boolean;
   private removeBookList: Book[] = new Array();
 
 
@@ -92,7 +92,6 @@ export class BookListComponent implements OnInit {
             }
         );
     }
-
 
 
   getBookList() {

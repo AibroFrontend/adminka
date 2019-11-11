@@ -10,7 +10,7 @@ export class LoginService {
   constructor(private http: HttpClient) { }
 
   sendCredential(username: string, password: string) {
-    const url = 'http://localhost:8181/token';
+    const url = 'http://52.14.153.7:8080/store/token';
     const encodedCredentials = btoa(username + ':' + password);
     const basicHeader = 'Basic ' + encodedCredentials;
     const headers = new HttpHeaders({
@@ -21,7 +21,7 @@ export class LoginService {
   }
 
   checkSession() {
-    const url = 'http://localhost:8181/checkSession';
+    const url = 'http://52.14.153.7:8080/store/checkSession';
     const headers = new HttpHeaders({
       'x-auth-token' : localStorage.getItem('xAuthToken')
     });
@@ -29,7 +29,7 @@ export class LoginService {
   }
 
   logout() {
-    const url = 'http://localhost:8181/user/logout';
+    const url = 'http://52.14.153.7:8080/store/user/logout';
     const headers = new HttpHeaders({
       'x-auth-token' : localStorage.getItem('xAuthToken')
     });

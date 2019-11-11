@@ -4,13 +4,14 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
-import { HttpClientModule } from '@angular/common/http';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatInputModule} from '@angular/material/input';
 import {FormsModule} from '@angular/forms';
 import {MatSelectModule} from '@angular/material/select';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import { MarkdownModule, MarkedOptions } from 'ngx-markdown';
 
 import 'hammerjs';
 
@@ -59,6 +60,21 @@ import {MatDialogModule} from '@angular/material/dialog';
     HttpClientModule,
     MatSlideToggleModule,
     MatListModule,
+    MarkdownModule.forRoot({
+      loader: HttpClientModule, // optional, only if you use [src] attribute
+      markedOptions: {
+        provide: MarkedOptions,
+        useValue: {
+          gfm: true,
+          tables: true,
+          breaks: false,
+          pedantic: false,
+          sanitize: false,
+          smartLists: true,
+          smartypants: false,
+        },
+      },
+    }),
     MatDialogModule,
     RouterModule.forRoot([
       { path: '', redirectTo: '/login', pathMatch: 'full'},

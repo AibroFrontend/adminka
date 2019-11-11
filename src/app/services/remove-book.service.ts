@@ -10,7 +10,7 @@ export class RemoveBookService {
   constructor(private http: HttpClient) { }
 
   sendBook(bookId: number) {
-    const url = 'http://localhost:8181/book/remove';
+    const url = 'http://52.14.153.7:8080/store/book/remove';
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
       'x-auth-token' : localStorage.getItem('xAuthToken')

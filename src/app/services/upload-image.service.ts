@@ -14,7 +14,7 @@ export class UploadImageService {
   modify(bookId: number) {
     console.log(this.filesToUpload);
     if (this.filesToUpload.length > 0) {
-      this.makeFileRequest('http://localhost:8181/book/update/image?id=' + bookId, [], this.filesToUpload).then((result) => {
+      this.makeFileRequest('http://52.14.153.7:8080/store/book/update/image?id=' + bookId, [], this.filesToUpload).then((result) => {
         console.log(result);
       }, (error) => {
         console.log(error);
@@ -23,7 +23,7 @@ export class UploadImageService {
   }
 
   upload(bookId: number) {
-    this.makeFileRequest('http://localhost:8181/book/add/image?id=' + bookId, [], this.filesToUpload).then((result) => {
+    this.makeFileRequest('http://52.14.153.7:8080/store/add/image?id=' + bookId, [], this.filesToUpload).then((result) => {
       console.log(result);
     },
       (error) => {

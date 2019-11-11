@@ -18,29 +18,30 @@
     <mat-grid-tile [colspan]="3" [rowspan]="3">
       <mat-list>
         <mat-list-item>
-          <p><strong>Author: </strong>{{book.author}}</p>
-          <p><strong>Publisher: </strong>{{book.publisher}}</p>
+          <!--<p><strong>Author: </strong>{{book.author}}</p>-->
+          <!--<p><strong>Publisher: </strong>{{book.publisher}}</p>-->
           <p><strong>Publication Date: </strong>{{book.publicationDate}}</p>
-          <p><strong>Language: </strong>{{book.language}}</p>
+          <!--<p><strong>Language: </strong>{{book.language}}</p>-->
           <p><strong>Categoru: </strong>{{book.category}}</p>
-          <p><strong>Pages: </strong>{{book.numberOfPages}}</p>
+          <!--<p><strong>Pages: </strong>{{book.numberOfPages}}</p>-->
         </mat-list-item>
       </mat-list>
     </mat-grid-tile>
     <mat-grid-tile [colspan]="3" [rowspan]="3">
       <mat-list>
         <mat-list-item>
-          <p><strong>Format: </strong>{{book.format}}</p>
-          <p><strong>ISBN: </strong>{{book.isbn}}</p>
-          <p><strong>Shipping weight: </strong>{{book.shippingWeight}}</p>
-          <p><strong>List Price: </strong>{{book.listPrice}}</p>
-          <p><strong>Our Price: </strong>{{book.ourPrice}}</p>
-          <p><strong>Number in stock: </strong>{{book.inStockNumber}}</p>
+          <!--<p><strong>Format: </strong>{{book.format}}</p>-->
+          <!--<p><strong>ISBN: </strong>{{book.isbn}}</p>-->
+          <!--<p><strong>Shipping weight: </strong>{{book.shippingWeight}}</p>-->
+          <!--<p><strong>List Price: </strong>{{book.listPrice}}</p>-->
+          <!--<p><strong>Our Price: </strong>{{book.ourPrice}}</p>-->
+          <!--<p><strong>Number in stock: </strong>{{book.inStockNumber}}</p>-->
         </mat-list-item>
       </mat-list>
     </mat-grid-tile>
     <mat-grid-tile [colspan]="6">
-      <p><strong>Description: </strong>{{book.description}}</p>
+      <!--<p><strong>Description: </strong>{{book.description}}</p>-->
+      <markdown class="variable-binding" [data]=book.description></markdown>
     </mat-grid-tile>
   </mat-grid-list>
 </div>
