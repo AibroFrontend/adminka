@@ -17,11 +17,13 @@
             <input matInput id="author" type="text" required [(ngModel)]="newBook.author" name="author" placeholder="Author">
           </mat-form-field>
         </mat-grid-tile>
-          <mat-grid-tile [colspan]="2" [rowspan]="1">
-            <mat-form-field>
-              <input matInput id="publisher" type="text" required [(ngModel)]="newBook.publisher" name="publisher" placeholder="Publisher">
+
+          <mat-grid-tile [colspan]="1" [rowspan]="1">
+            <mat-form-field >
+              <textarea matInput id="publisher" required [(ngModel)]="newBook.publisher" name="publisher" step="0.01" placeholder="publisher"></textarea>
             </mat-form-field>
           </mat-grid-tile>
+
         </mat-grid-list>
 
 
@@ -35,7 +37,7 @@
       <!--</mat-grid-list>-->
 
       <mat-grid-list [cols]="4" rowHeight="60px">
-        <mat-grid-tile [colspan]="1" [rowspan]="1">
+        <!-- <mat-grid-tile [colspan]="1" [rowspan]="1">
           <mat-form-field>
           <mat-select placeholder="Category" id="category" name="category" [(ngModel)]="newBook.category">
             <mat-option value="Management">Management</mat-option>
@@ -45,7 +47,7 @@
             <mat-option value="Arts &amp; Literature">Arts &amp; Literature</mat-option>
           </mat-select>
             </mat-form-field>
-        </mat-grid-tile>
+        </mat-grid-tile> -->
         <!--<mat-grid-tile [colspan]="2" [rowspan]="1">-->
           <!--<mat-form-field>-->
           <!--<mat-select placeholder="Format" id="format" name="format" [(ngModel)]="newBook.format">-->
@@ -131,10 +133,11 @@
           <textarea matInput id="description" required [(ngModel)]="newBook.description" name="description" step="0.01" placeholder="Description"></textarea>
         </mat-form-field>
       </mat-grid-tile>
-        <mat-grid-tile [colspan]="2" [rowspan]="1">
+
+        <!-- <mat-grid-tile [colspan]="2" [rowspan]="1">
           Image &nbsp;
             <input type="file" id="bookImage" name="bookImage"  (change)="uploadImageService.fileChangeEvent($event)">
-        </mat-grid-tile>
+        </mat-grid-tile> -->
       </mat-grid-list>
 
 

@@ -6,6 +6,7 @@ export class Book {
   public category: string;
   public tags: number;
   public description: string;
+  public publisher: string;
 
 
 
